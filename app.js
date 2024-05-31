@@ -70,12 +70,13 @@ function lottieFactory(containerId, pathName, halfwayFrame, segmentArr, lottieCo
         lottieContainer.addEventListener('click', function(){
             if(!clicked){
                 animation.playSegments(segmentArr,true);
-            } else {
+                clicked = true;
+            } else if (clicked){
                 animation.setDirection(-1);
                 animation.play();
+                clicked = false;
             }
-
-            clicked = !clicked;
+            console.log(clicked);
         })
 
         lottieContainer.addEventListener('mouseleave', function(){
