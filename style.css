@@ -138,11 +138,21 @@ section {
     height: 100%;
     display: grid;
     gap: 16px;
+    align-items: center;
 }
 #skills {
     font-size: 18px;
     color: white;
     letter-spacing: 2px;
+    grid-area: 1/1/2/2;
+}
+#skillsIcons {
+    color: white;
+    grid-area: 1/1/2/2;
+    justify-self: end;
+}
+i.fa-computer-mouse {
+    display: none;
 }
 .skills-list {
     list-style: none;
@@ -296,6 +306,12 @@ footer {
     section {
         padding-inline: max(calc((1440px - 99.99%)*(-.5)), 24px);
         margin-bottom: 24px;
+    }
+    i.fa-fingerprint {
+        display: none;
+    }
+    i.fa-computer-mouse {
+        display: inline;
     }
     .skills-list {
         display: flex;

@@ -61,7 +61,6 @@ function lottieFactory(containerId, pathName, halfwayFrame, segmentArr, lottieCo
     });
 
     if(lottieContainer) {
-        let clicked = false;
 
         const playAnimation = () => {
             animation.playSegments(segmentArr, true);
