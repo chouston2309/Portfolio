@@ -30,7 +30,7 @@ header {
 .header-toggle {
     width: 32px;
     height: 32px;
-    background-image: url('/images/general/hamburger.png');
+    background-image: url('images/general/hamburger.png');
     background-size: contain;
     background-repeat: no-repeat;
     cursor: pointer;
@@ -191,11 +191,11 @@ section {
 }
 
 .solarwinds a {
-    background-image: url('/images/solarwinds/main-hero.jpg');
+    background-image: url('images/solarwinds/main-hero.jpg');
 }
 
 .more a {
-    background-image: url('/images/general/more-mockup-1.jpg');
+    background-image: url('images/general/more-mockup-1.jpg');
     background-size: cover;
     background-position: 0% 5%;
 }
