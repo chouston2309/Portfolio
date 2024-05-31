@@ -50,7 +50,7 @@ function lottieFactory(containerId, pathName, halfwayFrame, segmentArr, lottieCo
         container: document.getElementById(containerId),
         renderer:'svg',
         loop: false,
-        path: `/images/lottie/${pathName}`
+        path: `images/lottie/${pathName}`
     });
     
     animation.play();
