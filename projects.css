@@ -1,0 +1,14 @@
+.projects h1 {
+    font-size: 30px;
+}
+.projects-wrapper {
+    gap: 24px
+}
+.projects-list {
+    gap: 24px;
+}
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

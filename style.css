@@ -1,0 +1,330 @@
+:root {
+    --teal: #0CAAA1;
+    --darkTeal: #0F3E3B;
+    --swBlue: #5AC8DC;
+    --swOrange: #ED6C2D;
+    --swGray: #111;
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    position: relative;
+}
+
+span, li {
+    font-family: 'Inconsolata', sans-serif;
+    font-weight: bold;
+}
+
+header {
+    padding: 24px;
+    position: relative;
+    border-bottom: 1px solid lightgray;
+}
+
+.header-toggle {
+    width: 32px;
+    height: 32px;
+    background-image: url('/images/general/hamburger.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    filter: brightness(0) saturate(100%) invert(16%) sepia(13%) saturate(3317%) hue-rotate(130deg) brightness(94%) contrast(88%);
+}
+.header-wrapper {
+    display: none;
+    background: white;
+    width: 100%;
+    height: 100vh;
+    z-index: 99;
+    position: absolute;
+    left: 0;
+    padding: 0 24px;
+}
+.active {
+    display: block;
+}
+.no-scroll {
+    overflow-y: hidden;
+}
+nav {
+    padding-top: 16px;
+}
+.links-nav {
+    text-align: right;
+    font-size: 30px;
+    list-style: none;
+
+    display: grid;
+    grid-template: auto / 1fr 1fr;
+    row-gap: 16px;
+    justify-content: start;
+    justify-items: start;
+}
+.home-link {
+    grid-area: 1/1/2/2;
+}
+.links-nav a {
+    text-decoration: none;
+    color: black;
+}
+.my-projects-link {
+    grid-area: 2/1/3/2;
+}
+.contact-me-link {
+    grid-area: 3/1/4/2;
+}
+.about-me-link {
+    grid-area: 4/1/5/2;
+}
+section {
+    padding: 24px;
+}
+.about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.main-about {
+    order: 1;
+    display: grid;
+    gap: 8px;
+}
+.main-about h1 {
+    text-align: center;
+    font-size: 30px;
+    color: var(--darkTeal);
+}
+.main-about p {
+    color: var(--darkTeal);
+    text-align: center;
+}
+.links-about {
+    list-style: none;
+    text-align: center;
+    color: var(--teal);
+    cursor: pointer;
+}
+.links-about li {
+    font-weight: normal;
+}
+.links-about a, .links-about a:visited {
+    text-decoration: none;
+    color: var(--teal);
+    font-weight: bold;
+}
+.profile-picture {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: linear-gradient(var(--teal),55%, var(--darkTeal));
+    order: 0;
+    overflow: hidden;
+}
+.profile-picture img {
+    max-width: 100%;
+    height: auto;
+}
+.skills {
+    background: #111;
+}
+.skills-wrapper {
+    height: 100%;
+    display: grid;
+    gap: 16px;
+}
+#skills {
+    font-size: 18px;
+    color: white;
+    letter-spacing: 2px;
+}
+.skills-list {
+    list-style: none;
+    height: 100%;
+    display: grid;
+    grid-template: 1fr 1fr / repeat(4, 1fr);
+    gap: 16px;
+}
+.skills-list li {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    font-size: 12px;
+    text-align: center;
+    color: white;
+}
+.projects-wrapper {
+    display: grid;
+    gap: 16px;
+}
+#projects {
+    font-size:18px;
+    letter-spacing: 2px;
+}
+.projects-list {
+    list-style: none;
+    display: grid;
+    gap: 16px;
+}
+.projects-list li {
+    width: 100%;
+    height: 200px;
+}
+.projects-list a {
+    text-decoration: none;
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+}
+.projects-list a {
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position: center;
+}
+
+.solarwinds a {
+    background-image: url('/images/solarwinds/main-hero.jpg');
+}
+
+.more a {
+    background-image: url('/images/general/more-mockup-1.jpg');
+    background-size: cover;
+    background-position: 0% 5%;
+}
+
+.projects-list a span {
+    background: var(--teal);
+    padding: 5px 10px;
+    color: white;
+}
+
+footer {
+    background: var(--darkTeal);
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+}
+
+.social-links {
+    list-style: none;
+    cursor: pointer;
+    color: white;
+}
+
+.social-links a, .social-links a:visited {
+    text-decoration: none;
+    color: white;
+
+}
+
+@media only screen and (min-width: 50em) {
+    .no-scroll {
+        overflow-y: unset;
+    }
+    header {
+        padding: 0;
+        padding-inline: max(calc((1440px - 99.99%)*(-.5)), 24px);
+    }
+    #hamburger {
+        display: none;
+    }
+    .header-wrapper {
+        display: block;
+        position: relative;
+        height: 50px;
+        z-index: 0;
+        padding: 0;
+    }
+    nav {
+        padding: 0;
+        height: 100%;
+    }
+    .links-nav {
+        height: 100%;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 48px;
+    }
+    /*.home-link {
+        grid-area: 1/1/2/2;
+        justify-self: start;
+    }
+    .my-projects-link {
+        grid-area: 1/2/2/3;
+        justify-self: start;
+    }
+    .contact-me-link {
+        grid-area: 1/7/2/8;
+        justify-self: end;
+    }
+    .about-me-link {
+        grid-area: 1/8/2/9;
+        justify-self: end;
+    }*/
+    .about-me {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+    }
+    .main-about {
+        width: min(100%, 500px);
+    }
+    .main-about h1, .main-about p, .main-about ul {
+        text-align: left;
+    }
+    .profile-picture {
+        width: 160px;
+        height: 160px;
+        aspect-ratio: 1;
+        justify-self: center;
+    }
+    main section:first-child {
+        margin-top: 24px;
+    }
+    section {
+        padding-inline: max(calc((1440px - 99.99%)*(-.5)), 24px);
+        margin-bottom: 24px;
+    }
+    .skills-list {
+        display: flex;
+        gap: 8px;
+        justify-content: space-between;
+    }
+    .skills-list li {
+        font-size: 12px;
+        max-width: 120px;
+    }
+    .projects-list {
+        grid-template: auto / repeat(2, 1fr);
+        gap: 24px;
+    }
+    .projects-list li {
+        height: 350px;
+        transition: .15s;
+    }
+    .projects-list li:hover {
+        transform: scale(1.02);
+    }
+    .projects-list span {
+        font-size: 18px;
+    }
+    #skills, #projects {
+        font-size: 24px;
+        font-weight: bolder;
+    }
+    footer {
+        height: 100px;
+    }
+}

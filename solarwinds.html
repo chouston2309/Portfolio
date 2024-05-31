@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="solarwinds.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.8/lottie.min.js"></script>
+        <Title>Christian Houston's Portfolio</Title> 
+    </head>
+    <header>
+        <div id="hamburger" class="header-toggle"></div>
+        <div class="header-wrapper">
+          <nav>
+              <ul class="links-nav">
+                <li class="home-link"><a href="/"><i class="fa-solid fa-house"></i></a></li>
+                <li class="my-projects-link"><a href="/projects.html">My Projects</a></li>
+               <!-- <li class="contact-me-link"><a href="">Contact Me</a></li>
+                <li class="about-me-link"><a href="">About Me</a></li>-->
+             </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="title section">
+            <h1>SolarWinds THWACK Store</h1>
+            <p>Solarwinds is a software company based in Austin, TX, which hosts a <strong>community</strong> of developers with its THWACK brand. THWACK provides users with <strong>points</strong>, in exchange for their engagement, which they spend in this store.</p>
+        </div>
+        <div class="home section">
+            <h2>Home</h2>
+            <div class="mobile">
+                <img class="mobile-img h-i-1" src="/images/solarwinds/mobile-home.png" alt="Solarwinds Home Page">
+                <img class="mobile-img h-i-2" src="/images/solarwinds/mobile-home-2.png" alt="Solarwinds Home Page">
+                <img class="mobile-img h-i-3" src="/images/solarwinds/mobile-home-3.png" alt="Solarwinds Home Page">
+            </div>
+            <div class="desktop">
+                <img src="/images/solarwinds/desktop-home.png" alt="Solarwinds Hero Image">
+            </div>
+            <ul class="notes">
+                <li>Featured product images to show the product selection on the main page</li>
+                <li>Clicking a category links the user to the shop page and pre-selects the product filter with their selection</li>
+                <li class="font-awesome"><i class="fa-solid fa-bolt"> : </i> <i class="fa-brands fa-html5"></i> <i class="fa-brands fa-css3-alt"></i> <i class="fa-brands fa-js"></i>
+                </li>
+            </ul>
+            <div class="points">
+                <img class="points-url" src="images/solarwinds/mobile-shop-zoom.png" alt="Solarwinds Points in Header">
+                <ul class="notes">
+                    <li>Each user's points are displayed in the header at all times to help know what they can afford</li>
+                    <li><strong>Local storage</strong> had to be used to keep the points displayed on every page</li>
+                    <li class="font-awesome"><i class="fa-solid fa-bolt"> : </i> <i class="fa-brands fa-js"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="shop section">
+            <h2>Shop</h2>
+            <p>The client wanted all products accessible from a single page so we decided a sort and filter page was necessary </p>
+            <div class="mobile">
+                <img class="mobile-img" src="/images/solarwinds/mobile-shop.png" alt="Solarwinds Shop">
+                <img class="mobile-img" src="/images/solarwinds/mobile-shop-filter.png" alt="Solarwinds Home Page">
+                <ul class="notes shop-n-1">
+                    <li>I built the <strong>filter and sort</strong> feature from scratch because the client said it was a dealbreaker without it and the platform didn't offer any such feature. I made an entirely new page to give the most flexibility in achieving this</li>
+                    <li>Sorting by <strong>My Balance</strong> pulls directly from the point balance stored in <strong>local storage</strong></li>
+                    <li>I used pseudo elements to style the checkboxes and radio buttons to the client's specifications</li>
+                    <li class="font-awesome"><i class="fa-solid fa-bolt"> : </i> <i class="fa-brands fa-html5"></i> <i class="fa-brands fa-css3-alt"></i> <i class="fa-brands fa-js"></i></li>
+                </ul>
+            </div>
+            <div class="desktop">
+                <img class="d-i-1" src="/images/solarwinds/desktop-shop.png" alt="Solarwinds Shop">
+                <img class="d-i-2" src="images/solarwinds/desktop-url.jpg" alt="">
+                <ul class="notes">
+                    <li>Clicking each category filter updates the url in the searchbar</li>
+                    <li class="font-awesome"><i class="fa-solid fa-bolt"> : </i> <i class="fa-brands fa-js"></i>
+                    </li>
+                </ul>
+             </div>
+        </div>
+        <div class="cart section">
+            <h2>Cart</h2>
+            <div class="mobile">
+                <img class="cart-m-1" src="/images/solarwinds/mobile-cart.png" alt="Solarwinds Cart Mobile">
+                <img class="cart-m-2" src="/images/solarwinds/mobile-cart-empty.png" alt="Solarwinds Cart Empty Mobile">
+                <img class="cart-d-1" src="/images/solarwinds/desktop-cart.png" alt="Solarwinds Cart">
+                <img class="cart-d-2" src="/images/solarwinds/desktop-cart-empty.png" alt="Solarwinds Cart Empty">
+                <ul class="notes cart-n-1">
+                    <li>Dynamically reformatted all prices from US dollar format to "__ , ___ THWACK Points"</li>
+                    <li class="font-awesome"><i class="fa-solid fa-bolt"> : </i> <i class="fa-brands fa-js"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <ul class="social-links">
+            <li><a href="www.linkedin.com/in/christian-houston-17b8b0167"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
+        </ul>
+    </footer>
+    <script src="app.js"></script>
+</html>
