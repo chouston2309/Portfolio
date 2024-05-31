@@ -67,7 +67,7 @@ function lottieFactory(containerId, pathName, halfwayFrame, segmentArr, lottieCo
             animation.playSegments(segmentArr,true);
         });
 
-        lottieContainer.addEventListener('click', function(){
+        lottieContainer.addEventListener('touchstart', function(){
             if(!clicked){
                 animation.playSegments(segmentArr,true);
                 clicked = true;
