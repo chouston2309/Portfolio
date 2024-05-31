@@ -63,26 +63,22 @@ function lottieFactory(containerId, pathName, halfwayFrame, segmentArr, lottieCo
     if(lottieContainer) {
         let clicked = false;
 
-        lottieContainer.addEventListener('mouseenter', function(){
-            animation.playSegments(segmentArr,true);
-        });
+        const playAnimation = () => {
+            animation.playSegments(segmentArr, true);
+        };
 
-        lottieContainer.addEventListener('touchstart', function(){
-            if(!clicked){
-                animation.playSegments(segmentArr,true);
-                clicked = true;
-            } else if (clicked){
-                animation.setDirection(-1);
-                animation.play();
-                clicked = false;
-            }
-            console.log(clicked);
-        })
-
-        lottieContainer.addEventListener('mouseleave', function(){
+        const reverseAnimation = () => {
             animation.setDirection(-1);
             animation.play();
-        })  
+        };
+
+        // Mouse events
+        lottieContainer.addEventListener('mouseenter', playAnimation);
+        lottieContainer.addEventListener('mouseleave', reverseAnimation);
+
+        // Touch events
+        lottieContainer.addEventListener('touchstart', playAnimation);
+        lottieContainer.addEventListener('touchend', reverseAnimation);
     }
 }
 
