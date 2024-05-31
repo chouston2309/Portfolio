@@ -61,9 +61,22 @@ function lottieFactory(containerId, pathName, halfwayFrame, segmentArr, lottieCo
     });
 
     if(lottieContainer) {
+        let clicked = false;
+
         lottieContainer.addEventListener('mouseenter', function(){
             animation.playSegments(segmentArr,true);
         });
+
+        lottieContainer.addEventListener('click', function(){
+            if(!clicked){
+                animation.playSegments(segmentArr,true);
+            } else {
+                animation.setDirection(-1);
+                animation.play();
+            }
+
+            clicked = !clicked;
+        })
 
         lottieContainer.addEventListener('mouseleave', function(){
             animation.setDirection(-1);
